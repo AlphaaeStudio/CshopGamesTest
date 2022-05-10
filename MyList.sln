@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyList", "MyList\MyList.csproj", "{023803FC-2633-4CF0-98D2-7C35D3102A5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DMapBuilder", "2DMapBuilder\2DMapBuilder.csproj", "{A63D28EF-5DD4-4F66-AFD4-8EADAA7D2EDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2DMapBuilder", "2DMapBuilder\2DMapBuilder.csproj", "{A63D28EF-5DD4-4F66-AFD4-8EADAA7D2EDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadTest", "ThreadTest\ThreadTest.csproj", "{817DF948-B49E-4035-9498-1F3BBBD28149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleCity", "BattleCity\BattleCity.csproj", "{F3FFABEA-1477-47C5-A16A-6D59ABA84A41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{A63D28EF-5DD4-4F66-AFD4-8EADAA7D2EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A63D28EF-5DD4-4F66-AFD4-8EADAA7D2EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A63D28EF-5DD4-4F66-AFD4-8EADAA7D2EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817DF948-B49E-4035-9498-1F3BBBD28149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817DF948-B49E-4035-9498-1F3BBBD28149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817DF948-B49E-4035-9498-1F3BBBD28149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817DF948-B49E-4035-9498-1F3BBBD28149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3FFABEA-1477-47C5-A16A-6D59ABA84A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3FFABEA-1477-47C5-A16A-6D59ABA84A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3FFABEA-1477-47C5-A16A-6D59ABA84A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3FFABEA-1477-47C5-A16A-6D59ABA84A41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
