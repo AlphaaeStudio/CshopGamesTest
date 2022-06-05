@@ -49,5 +49,13 @@ namespace BattleCity {
                 Thread.Sleep(sleepTime);
             }
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e) {
+            GameFramework.KeyDown(e);
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e) {
+            GameFramework.KeyUp(e);
+        }
     }
 }
