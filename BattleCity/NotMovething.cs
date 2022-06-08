@@ -6,11 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BattleCity {
+
+    enum NotMovethingTag {
+        Boss,
+        Wall,
+        Steel
+    }
     class NotMovething : GameObject {
-        public NotMovething(Image img, int x, int y) {
+
+        public NotMovethingTag Tag { get; set; }
+        public NotMovething(Image img, int x, int y, NotMovethingTag tag) {
             Img = img;
             X = x;
             Y = y;
+            Tag = tag;
         }
         private Image img;
         public Image Img { get { return img; } 

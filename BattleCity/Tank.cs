@@ -58,32 +58,9 @@ namespace BattleCity {
             this.Dir = Direction.Up;
         }
 
-        public override void Update() {
-            base.Update();
-            MoveCheck();
-            Move();
-        }
-
         public abstract void HandleMoveCheck();
 
-        public void Move() {
-            if (!isMoving) return;
-            switch (Dir) {
-                case Direction.Up:
-                    Y -= Speed;
-                    break;
-                case Direction.Down:
-                    Y += Speed;
-                    break;
-                case Direction.Left:
-                    X -= Speed;
-                    break;
-                case Direction.Right:
-                    X += Speed;
-                    break;
-            }
-        }
-        public void MoveCheck() {
+        public override void MoveCheck() {
             if (!isMoving) return;
             #region 边界检测
             if (Dir == Direction.Up) {
@@ -125,6 +102,27 @@ namespace BattleCity {
                 return;
             }
             #endregion
+        }
+        protected virtual void Attack(BulletTag tag) {
+            int x = this.X;
+            int y = this.Y;
+            switch (this.Dir) {
+                case Direction.Up:
+                    x += Width / 2;
+                    break;
+                case Direction.Down:
+                    x += Width / 2;
+                    y += Height;
+                    break;
+                case Direction.Left:
+                    y += Height / 2;
+                    break;
+                case Direction.Right:
+                    x += Width;
+                    y += Height / 2;
+                    break;
+            }
+            GameObjectManager.CreateBullet(x, y, 8, Dir, tag);
         }
 
     }

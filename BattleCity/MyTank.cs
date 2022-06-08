@@ -10,8 +10,15 @@ using BattleCity.Properties;
 namespace BattleCity {
     class MyTank : Tank {
 
+        private int HP;
+        private int originX;
+        private int originY;
 
-        public MyTank(int x, int y, int speed) : base(x, y, speed, MyTankTexture) { }
+        public MyTank(int x, int y, int speed) : base(x, y, speed, MyTankTexture) {
+            this.HP = 3;
+            originX = x;
+            originY = y;
+        }
 
         public override void HandleMoveCheck() {
             isMoving = false;
@@ -35,6 +42,9 @@ namespace BattleCity {
                     if (Dir != Direction.Right) Dir = Direction.Right;
                     isMoving = true;
                     break;
+                case Keys.Space:
+                    Attack(BulletTag.MyTank);
+                    break;
             }
         }
 
@@ -53,6 +63,22 @@ namespace BattleCity {
                     isMoving = false;
                     break;
             }
+        }
+
+        public void TakeDamage() {
+            if (HP <= 0) {
+                //gameover
+                GameFramework.ChangeToGameOver();
+            }
+            X = originX;
+            Y = originY;
+            Dir = Direction.Up;
+            SoundManenger.PlayHit();
+        }
+
+        protected override void Attack(BulletTag tag) {
+            base.Attack(tag);
+            SoundManenger.PlayFire();
         }
     }
 }
